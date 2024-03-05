@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Text Field</title>
+</head>
+<body>
+    <div>
+        <label for="textInput">Enter Text:</label>
+        <input type="text" id="textInput">
+    </div>
+    <br>
+    <div>
+        <label for="variableInput">Enter Variable Value:</label>
+        <input type="text" id="variableInput">
+        <button onclick="insertVariable()">Insert</button>
+    </div>
+
+    <div>
+        <button onclick="generateOutput()">Generate Output</button>
+    </div>
+
+    <div>
+        <h3>Output:</h3>
+        <div id="output"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

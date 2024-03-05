@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generate PDF from Text</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+<textarea id="inputText" rows="10" cols="50">Enter your text here...</textarea><br>
+<button onclick="generatePDF()">Generate PDF</button>
+
+<script>
+function generatePDF() {
+  var text = document.getElementById('inputText').value;
+  
+  // Create a new jsPDF instance
+  var doc = new jsPDF();
+
+  // Set font size and text
+  doc.setFontSize(12);
+  doc.text(text, 10, 10);
+
+  // Output as a blob to allow download
+  doc.output('save', 'output.pdf');
+}
+</script>
+</body>
+</html>
